@@ -1,4 +1,4 @@
-# SKIA
+SKIA:
 
 O SKIA é uma plataforma web desenvolvida como Trabalho de Conclusão de Curso, voltada à prevenção do câncer de pele e ao apoio na identificação inicial de lesões suspeitas de melanoma.
 O projeto busca unir tecnologia, informação e saúde, com atenção especial à exposição ocupacional à radiação solar.
@@ -8,17 +8,17 @@ O projeto tem como foco a prevenção do melanoma e a exposição de trabalhador
 A plataforma não substitui diagnóstico, avaliação ou acompanhamento realizado por profissionais da saúde.
 
 
-## Funcionalidades
+Funcionalidades:
 
--> Cadastro e login de pacientes e médicos;
--> Envio de imagens de lesões pelos pacientes;
--> Área médica para consulta das solicitações;
--> Registro e histórico de laudos;
--> Conteúdos sobre melanoma, prevenção e tratamento;
--> Monitoramento do índice UV;
--> Informações sobre unidades de saúde de Paulínia;
--> Chatbot informativo;
--> Integração planejada com Inteligência Artificial para análise de imagens.
+- Cadastro e login de pacientes e médicos;
+- Envio de imagens de lesões pelos pacientes;
+- Área médica para consulta das solicitações;
+- Registro e histórico de laudos;
+- Conteúdos sobre melanoma, prevenção e tratamento;
+- Monitoramento do índice UV;
+- Informações sobre unidades de saúde de Paulínia;
+- Chatbot informativo;
+- Integração planejada com Inteligência Artificial para análise de imagens.
 
 ## Materias:
 
