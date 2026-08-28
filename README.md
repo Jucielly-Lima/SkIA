@@ -37,3 +37,23 @@ Ferramentas utilizadas: Visual Studio Code, XAMPP e MySQL Workbench.
 **Justificativa**
 
 A proposta surgiu a partir do estudo sobre a exposição de trabalhadores à radiação solar e o risco de desenvolvimento de melanoma. A partir disso, foi desenvolvido um site com informações sobre prevenção, melanoma e atendimento, além de áreas diferentes para pacientes e médicos.
+
+**Status**
+
+Projeto acadêmico em desenvolvimento.
+
+
+**Como executar**
+
+O projeto utiliza PHP e MySQL e pode ser executado localmente com o XAMPP.
+
+O banco de dados utilizado no desenvolvimento e o arquivo de conexão não estão disponíveis no repositório por conterem informações privadas.
+
+
+**Equipe**
+
+Ana Julia Zanardi  
+Jucielly Aparecida Nepununcena de Lima  
+Lorena Helmeister Furlan
+
+Trabalho desenvolvido no curso Técnico em Informática do CEMEP, em Paulínia/SP.
