@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKIA - Identificação Inteligente</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div><img src="../Imagens/Logo_sem_Fundo.png" alt="Logo da empresa SKIA"></div>
+
+        <nav>
+            <a href="index.php">Inicio</a>
+            <a href="SKIA.html">SKIA-IA</a>
+            <a href="Melanoma.html">Melanoma</a>
+            <a href="Prevencao.html"  class="active">Prevenção</a>
+            <a href="tratamento.html">Tratamento</a>
+            <a href="Criadoras.html">Criadoras</a>
+            <a href="Paulinia.html">Paulínia</a>
+            <a href="enviarImg.php">Enviar</a>
+            <a href="Historico.php">Histórico</a>
+            <a href="perfil.php">Perfil</a>   
+        </nav>
+
+        <a href="/TCC/Geral/PHP/logout.php" class="logout-btn">Sair</a>
+    </header>
+
+
+
+<br><br><br>
+
+<div class="CTMelanoma"><fieldset class = "Divs">
+  <div class="icon-circle">☀️</div>
+    <h2> Monitor de Índice UV - Paulínia/SP</h2>
+    <br><br>
+    <p id="data"></p>
+    <p id="uv">Carregando...</p>
+    
+<script>  
+const API_KEY = "691726605b19fe95b33a95e6d96c7992";  
+
+// Coordenadas corretas de Paulínia/SP
+const LAT = -22.7611;
+const LON = -47.1542;
+
+async function getUV() {
+    try {
+
+        const url = `https://api.openweathermap.org/data/2.5/uvi?lat=${LAT}&lon=${LON}&appid=${API_KEY}`;
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Erro na API: " + response.status);
+        }
+
+        const data = await response.json();
+        const uv = data.value;
+
+        function atualizarDataHora(){
+            let hoje = new Date();
+            let dataFormatada = hoje.toLocaleDateString("pt-BR");
+            let horaFormatada = hoje.toLocaleTimeString("pt-BR");
+            document.getElementById("data").innerText =
+                `Data: ${dataFormatada} | Horário: ${horaFormatada}`;
+        }
+        
+        atualizarDataHora();
+        setInterval(atualizarDataHora, 1000);
+
+        let nivel = "";
+
+        if (uv <= 2) nivel = "Baixo";
+        else if (uv <= 5) nivel = "Moderado";
+        else if (uv <= 7) nivel = "Alto";
+        else if (uv <= 10) nivel = "Muito Alto";
+        else nivel = "Extremo";
+
+        document.getElementById("uv").innerText =
+            `Índice UV atual: ${uv.toFixed(2)} → ${nivel}`;
+
+    } catch (erro) {
+        console.error("Erro ao buscar UV:", erro);
+        document.getElementById("uv").innerText =
+            "Erro ao carregar índice UV.";
+    }
+}
+
+
+getUV();
+
+</script>
+</fieldset></div>
+
+<br><br>
+
+
+  <!-- Raios UV -->
+  <div class="cards-grid small-gap">
+
+    <div class="info-card_RAIOS">
+      <div class="mini-icon">☀</div>
+      <h3>Raios UVA</h3>
+      <br>
+      <p>
+        Os raios UVA penetram profundamente na pele. Eles estão associados ao envelhecimento precoce (rugas e manchas) 
+        e também contribuem para o desenvolvimento de câncer de pele. Eles passam por nuvens e vidros e têm intensidade 
+        constante ao longo do dia.
+      </p>
+    </div>
+
+    <div class="info-card_RAIOS">
+      <div class="mini-icon">🌤</div>
+      <h3>Raios UVB</h3>
+      <br>
+      <p>
+        Os raios UVB afetam a camada superficial da pele. São os principais responsáveis pelas queimaduras solares 
+        (vermelhidão). Eles variam de intensidade dependendo do horário, estação do ano e altitude, sendo mais intensos
+        no verão e próximo ao meio-dia.
+      </p>
+    </div>
+
+  </div>
+
+
+<section class="section">
+
+  <div class="highlight-box">
+    <div class="icon-circle">🛡</div>
+    <div class="title"><h1>Prevenção é o Melhor Remédio</h1>
+    <br><br><br>
+    <p>
+     <b>A prevenção é a principal estratégia para reduzir a incidência e a mortalidade por câncer de pele.</b></div>
+<br><br>
+Prevenção é uma medida proativa que visa evitar a ocorrência de um evento indesejado, como uma doença ou acidente. No contexto do câncer de pele, a prevenção envolve práticas e hábitos que podem reduzir o risco de desenvolver essa doença. Algumas das principais medidas de prevenção incluem:
+
+<br><br>
+Essas medidas podem ajudar a reduzir o risco de desenvolver câncer de pele, mas é importante lembrar que a 
+prevenção não é 100% eficaz. Mesmo com todas as medidas de prevenção, ainda há risco de desenvolver câncer de pele. 
+Por isso, é importante realizar exames de pele regularmente e procurar um médico caso suspeite de algum problema.
+
+<br><br>
+Além disso, é importante lembrar que a prevenção não é apenas uma questão individual, mas também uma questão social. 
+A prevenção do câncer de pele pode ser promovida em nível comunitário, através de campanhas de conscientização e educação.
+
+<br>
+    </p>
+  </div>
+
+  <!-- Hábitos Saudáveis -->
+  <div class="highlight-box habits">
+
+  <h2>Hábitos Saudáveis</h2>
+  <br><br>
+
+  <div class="cards-grid">
+
+    <div class="habit-card">
+      <div>
+        <h4>Evite Horários de Pico</h4>
+        <br><br>
+        <p>Evite a exposição solar direta entre as 10h e as 16h, quando os raios UV estão mais intensos.</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <div>
+        <h4>Uso de Protetor Solar</h4>
+        <br><br>
+        <p>Aplique protetor solar de amplo espectro (FPS 30 ou superior) todos os dias, mesmo quando estiver nublado.</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <div>
+        <h4>Proteção Física</h4>
+        <br><br>
+        <p>Use chapéus de abas largas, óculos de sol com proteção UV e roupas que cubram a pele exposta.</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <div>
+        <h4>Autoexame Regular</h4>
+        <br><br>
+        <p>Examine sua pele mensalmente. Conheça suas pintas e observe qualquer mudança usando a regra ABCDE.</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <div>
+        <h4>Hidratação</h4>
+        <br><br>
+        <p>Beba bastante água ao longo do dia para manter a pele saudável e ajudar na sua regeneração.</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <div>
+        <h4>Consulta Dermatológica</h4>
+        <br><br>
+        <p>Consulte um dermatologista regularmente para avaliação profissional e prevenção de doenças de pele.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<script src="script.js"></script>
+
+   <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COLUNA 1 -->
+            <div class="footer-col">
+
+                <div class="footer-logo">
+                    🛡 <span>SKIA</span>
+                </div>
+
+                <p>
+                    Inteligência Artificial aplicada à identificação educacional 
+                    e triagem de melanoma.
+                    Unindo tecnologia e saúde para um futuro mais preventivo.
+                </p>
+
+            </div>
+
+            <!-- COLUNA 2 -->
+            <div class="footer-col">
+
+                <h4>Conteúdo</h4>
+
+                <a href="SKIA.html">Sobre a IA</a>
+                <a href="Melanoma.html">O que é melanoma?</a>
+                <a href="Prevencao.html">Prevenção</a>
+
+            </div>
+
+            <!-- COLUNA 3 -->
+            <div class="footer-col">
+
+                <h4>Informação</h4>
+
+                <a href="tratamento.html">Tratamentos</a>
+                <a href="Criadoras.html">A Equipe</a>
+                <a href="perfil.php">Área do Usuário</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SKIA Project. Todos os direitos reservados.
+            </p>
+
+            <p class="disclaimer">
+                Aviso: O SKIA é um projeto científico e educacional.
+                Não substitui o diagnóstico médico profissional.
+                Consulte sempre um dermatologista.
+            </p>
+
+        </div>
+
+    </footer>
+
+    
+<script>
+    window.chtlConfig = {
+        chatbotId: "9934493585"
+    };
+</script>
+
+<script
+    async
+    data-id="9934493585"
+    id="chtl-script"
+    type="text/javascript"
+    src="https://chatling.ai/js/embed.js">
+</script>
+</body>
+</html>

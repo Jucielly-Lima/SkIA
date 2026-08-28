@@ -1,0 +1,541 @@
+/* ========= RESET ========= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --marrom: #5a2d0c;
+    --marrom2: #8f4a10;
+    --marrom3: #a95d16;
+
+    --rosa: #efcfcf;
+    --rosa2: #f3dddd;
+    --rosa3: #f3dede;
+    --card: #faf6f6;
+
+    --linha: #d9a7a7;
+
+    --gradiente: linear-gradient(135deg,#8f4a10,#a95d16);
+
+    --sombra: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ========= BODY ========= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--rosa2);
+    color: var(--marrom);
+}
+
+/* ========= HEADER ========= */
+
+header{
+    background: var(--rosa);
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-navbar img{
+    width: 140px;
+}
+
+/* ========= NAV ========= */
+
+nav{
+    background: #fff5f5;
+
+    display: flex;
+    gap: 30px;
+
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--marrom);
+    font-weight: 500;
+}
+
+nav a.active{
+    background: var(--gradiente);
+    color: white;
+
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+/* ========= BOTÕES ========= */
+
+.login-btn,
+.upload-btn,
+.editar-btn{
+    border: none;
+    border-radius: 30px;
+
+    padding: 14px 26px;
+
+    background: var(--gradiente);
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.login-btn:hover,
+.upload-btn:hover,
+.editar-btn:hover,
+.action-card:hover,
+.botao-acesso:hover{
+    transform: translateY(-3px);
+}
+
+/* ========= PÁGINA INICIAL ========= */
+
+.acesso-page{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        180deg,
+        #d89a9a,
+        #dca5a5
+    );
+}
+
+.novo-index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-area{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo-img{
+    width: 320px;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 8px 20px rgba(0,0,0,.15)
+    );
+}
+
+.linha-logo{
+    width: 130px;
+    height: 5px;
+
+    margin: 20px auto 0;
+
+    border-radius: 20px;
+    background: #f4dede;
+}
+
+.acesso-botoes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.botao-acesso{
+    width: 320px;
+    height: 90px;
+
+    border: none;
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #5a2d0c,
+        #7a3e12
+    );
+
+    color: white;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+
+.botao-acesso:active{
+    transform: scale(.98);
+}
+
+.icone{
+    font-size: 32px;
+}
+
+/* ========= PÁGINAS ========= */
+
+.ia-page,
+.dashboard-page{
+    padding: 40px;
+}
+
+.ia-container,
+.dashboard-container{
+    display: flex;
+    gap: 30px;
+}
+
+/* ========= CARDS ========= */
+
+.ia-left,
+.ia-right,
+.perfil-card,
+.dados-card{
+    background: var(--card);
+
+    padding: 40px;
+    border-radius: 30px;
+
+    box-shadow: var(--sombra);
+}
+
+/* ========= SIDEBAR ========= */
+
+.ia-left,
+.perfil-card{
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.logo-central{
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.mini-line,
+.linha-pequena{
+    height: 4px;
+
+    border-radius: 20px;
+    background: var(--linha);
+}
+
+.mini-line{
+    width: 80px;
+    margin-bottom: 25px;
+}
+
+.linha-pequena{
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+.ia-left p,
+.perfil-card p,
+.upload-text p{
+    color: #6f4a32;
+    line-height: 1.7;
+}
+
+/* ========= PERFIL ========= */
+
+.perfil-icon{
+    width: 120px;
+    height: 120px;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background: var(--gradiente);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 55px;
+}
+
+.perfil-card h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* ========= ÁREA DIREITA ========= */
+
+.ia-right,
+.dados-card{
+    flex: 1;
+}
+
+/* ========= UPLOAD ========= */
+
+.upload-card{
+    background: white;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 35px;
+    margin-bottom: 30px;
+
+    border-radius: 25px;
+}
+
+.upload-icon,
+.action-icon,
+.historico-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: var(--rosa3);
+}
+
+.upload-icon{
+    width: 90px;
+    height: 90px;
+
+    font-size: 40px;
+}
+
+.action-icon{
+    width: 70px;
+    height: 70px;
+
+    font-size: 35px;
+}
+
+.historico-icon{
+    width: 55px;
+    height: 55px;
+
+    font-size: 24px;
+}
+
+.upload-text{
+    flex: 1;
+}
+
+.upload-text h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* ========= ACTIONS ========= */
+
+.actions{
+    display: flex;
+    gap: 25px;
+}
+
+.action-card{
+    flex: 1;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.action-card span{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* ========= DADOS ========= */
+
+.dados-card h2{
+    font-size: 54px;
+    margin-bottom: 10px;
+}
+
+.dados-card h3{
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.fake-data{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-bottom: 40px;
+}
+
+.bar{
+    height: 10px;
+
+    border-radius: 20px;
+    background: #e7c1c1;
+}
+
+.bar.big{ width: 70%; }
+.bar.medium{ width: 62%; }
+.bar.small{ width: 48%; }
+
+.divider{
+    width: 100%;
+    height: 1px;
+
+    margin-bottom: 35px;
+
+    background: #ecd6d6;
+}
+
+.historico{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.historico-item{
+    background: white;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+}
+
+.historico-text{
+    width: 100%;
+}
+
+.text-line{
+    height: 8px;
+
+    margin-bottom: 12px;
+
+    border-radius: 20px;
+    background: #e7c1c1;
+}
+
+.text-line.large{ width: 50%; }
+.text-line.medium{ width: 45%; }
+.text-line.small{ width: 15%; }
+
+/* ========= RESPONSIVO ========= */
+
+@media(max-width:1000px){
+
+    .ia-container,
+    .dashboard-container,
+    .actions{
+        flex-direction: column;
+    }
+
+    .ia-left,
+    .perfil-card{
+        width: 100%;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+@media(max-width:768px){
+
+    .logo-img{
+        width: 240px;
+    }
+
+    .botao-acesso{
+        width: 260px;
+        height: 75px;
+
+        font-size: 24px;
+    }
+
+    .icone{
+        font-size: 26px;
+    }
+}
+
+@media(max-width:600px){
+
+    header,
+    .ia-page,
+    .dashboard-page{
+        padding: 20px;
+    }
+
+    .ia-left,
+    .ia-right,
+    .perfil-card,
+    .dados-card{
+        padding: 25px;
+    }
+
+    .dados-card h2{
+        font-size: 38px;
+    }
+
+    .dados-card h3{
+        font-size: 28px;
+    }
+
+    .perfil-card h1{
+        font-size: 30px;
+    }
+
+    .upload-text h2{
+        font-size: 28px;
+    }
+
+    .action-card span{
+        font-size: 22px;
+    }
+}
+
+
+/* Logout */
+
+.logout-btn {
+    background: #6b3b0c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro Médico - SKIA</title>
+
+    <link rel="stylesheet" href="/TCC/Style/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div>
+            <img src="/TCC/Imagens/Logo_sem_Fundo.png" alt="Logo da empresa SKIA">
+        </div>
+
+        <a href="/TCC/Geral/Acesso.html" class="logout-btn">
+            Voltar
+        </a>
+
+    </header>
+
+    <!-- CADASTRO -->
+    <main class="cadastro-container">
+
+        <div class="cadastro-card">
+
+            <h1>Cadastro Médico</h1>
+
+            <p class="subtitulo">
+                Cadastre-se para ter acesso à plataforma
+            </p>
+<form
+    id="teste"
+    class="cadastro-form"
+    method="POST"
+    action="/TCC/Geral/PHP/cadastroMedico.php">
+
+                <!-- PRIMEIRA LINHA -->
+                <div class="grid-2">
+
+                    <div class="inputBox">
+
+                        <label for="usuario">Usuário</label>
+
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Digite seu usuário"
+                            autocomplete="username"
+                            required>
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <label for="nome">Nome Completo</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="inputBox full-width">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+                <!-- SEGUNDA LINHA -->
+                <div class="grid-2">
+
+                    <div class="inputBox">
+
+                        <label for="crm">CRM</label>
+
+                        <input
+                            type="text"
+                            id="crm"
+                            name="crm"
+                            placeholder="Digite seu CRM"
+                            required>
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <label for="especialidade">Especialidade</label>
+
+                        <input
+                            type="text"
+                            id="especialidade"
+                            name="especialidade"
+                            placeholder="Digite sua especialidade"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- SENHA -->
+                <div class="inputBox full-width">
+
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="new-password"
+                        required>
+
+                </div>
+                <label>
+
+<input
+type="checkbox"
+name="lgpd"
+required>
+
+Li e concordo com os
+<a href="Termos.html" target="_blank">
+Termos e Política de Privacidade
+</a>.
+
+</label>
+
+                <!-- BOTÃO -->
+                <button type="submit" class="cadastro-btn">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <div class="linha"></div>
+
+            <p class="login-text">
+                Já tem uma conta?
+                <a href="/TCC/Geral/Conta.html">
+                    Entre com a sua conta
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+
+                <div class="footer-logo">
+                    🛡 <span>SKIA</span>
+                </div>
+
+                <p>
+                    Inteligência Artificial aplicada à identificação educacional e triagem de melanoma.
+                    Unindo tecnologia e saúde para um futuro mais preventivo.
+                </p>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Conteúdo</h4>
+
+                <a href="/TCC/Paciente/SKIA.html">Sobre a IA</a>
+                <a href="/TCC/Paciente/Melanoma.html">O que é melanoma?</a>
+                <a href="/TCC/Paciente/Prevencao.html">Prevenção</a>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Informação</h4>
+
+                <a href="/TCC/Paciente/tratamento.html">Tratamentos</a>
+                <a href="/TCC/Geral/Criadoras.html">A Equipe</a>
+                <a href="/TCC/Geral/indexGeral.html">Área do Usuário</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SKIA Project. Todos os direitos reservados.
+            </p>
+
+            <p class="disclaimer">
+                Aviso: O SKIA é um projeto científico e educacional.
+                Não substitui o diagnóstico médico profissional.
+                Consulte sempre um dermatologista.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

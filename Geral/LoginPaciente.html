@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadastro Paciente - SKIA</title>
+
+<link rel="stylesheet" href="/TCC/Style/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div>
+<img src="/TCC/Imagens/Logo_sem_Fundo.png" alt="Logo SKIA">
+</div>
+
+<button class="logout-btn">
+<a href="/TCC/Geral/Acesso.html">Voltar</a>
+</button>
+
+</header>
+
+<main class="cadastro-container">
+
+<div class="cadastro-card">
+
+<h1>Cadastro Paciente</h1>
+
+<p class="subtitulo">
+Cadastre-se para ter acesso à plataforma
+</p>
+
+<form action="/TCC/Geral/PHP/cadastroPaciente.php" method="POST">
+
+<div class="grid-2">
+
+<div class="inputBox"><label>Usuário</label><input type="text" name="usuario" required></div>
+
+<div class="inputBox"><label>Nome Completo</label><input type="text" name="nome" required></div>  </div>
+
+<div class="inputBox full-width"><label>E-mail</label><input type="email" name="email" required></div>
+
+<div class="inputBox full-width"><label>Senha</label><input type="password" name="senha" required></div>
+<br><br>
+<label>
+
+<input
+type="checkbox"
+name="lgpd"
+required>
+
+Li e concordo com os
+<a href="Termos.html" target="_blank">
+Termos e Política de Privacidade
+</a>
+<br><br>
+
+</label>
+<button class="cadastro-btn">Cadastrar</button>
+<br><br>
+</form>
+<div class="linha"></div>
+<p class="login-text">Já possui uma conta?<a href="Conta.html">Entrar</a></p>
+</div>
+</main>
+</body>
+</html>

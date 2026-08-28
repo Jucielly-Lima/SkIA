@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Médico - SKIA</title>
+
+    <link rel="stylesheet" href="../Style/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div>
+            <img src="../Imagens/Logo_sem_Fundo.png" alt="Logo da empresa SKIA">
+        </div>
+
+        <button class="logout-btn" onclick="window.location.href='indexGeral.html'">
+            Voltar
+        </button>
+
+    </header>
+
+    <!-- CADASTRO -->
+    <main class="cadastro-container">
+
+        <div class="cadastro-card">
+
+            <h1>Entre com a sua conta</h1>
+
+            <p class="subtitulo">
+                Cadastre-se para ter acesso à plataforma
+            </p>
+
+    <form class="cadastro-form" method="POST" action="../Geral/PHP/login.php">
+                <!-- PRIMEIRA LINHA -->
+                <div class="grid-2">
+
+                    <div class="inputBox">
+                        <label for="usuario">Usuário</label>
+
+                        <input 
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Digite seu usuário"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <!-- SENHA -->
+                <div class="inputBox full-width">
+
+                    <label for="senha">Senha</label>
+
+                    <input 
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+                </div>
+
+                <!-- BOTÃO -->
+        <button type="submit" class="cadastro-btn"> Entrar </button>
+
+            </form>
+
+            <div class="linha"></div>
+
+            <p class="login-text"> Não tem uma conta? <a href="Acesso.html">Crie sua conta</a></p>
+
+        </div>
+
+    </main>
+
+
+
+
+
+      <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COLUNA 1 -->
+            <div class="footer-col">
+
+                <div class="footer-logo">
+                    🛡 <span>SKIA</span>
+                </div>
+
+                <p>
+                    Inteligência Artificial aplicada à identificação educacional 
+                    e triagem de melanoma.
+                    Unindo tecnologia e saúde para um futuro mais preventivo.
+                </p>
+
+            </div>
+
+            <!-- COLUNA 2 -->
+            <div class="footer-col">
+
+                <h4>Conteúdo</h4>
+
+                <a href="../Paciente/SKIA.html">Sobre a IA</a>
+                <a href="../Paciente/Melanoma.html">O que é melanoma?</a>
+                <a href="../Paciente/Prevencao.html">Prevenção</a>
+
+            </div>
+
+            <!-- COLUNA 3 -->
+            <div class="footer-col">
+
+                <h4>Informação</h4>
+
+                <a href="../Paciente/tratamento.html">Tratamentos</a>
+                <a href="../Geral/Criadoras.html">A Equipe</a>
+                <a href="../Geral/indexGeral.html">Área do Usuário</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SKIA Project. Todos os direitos reservados.
+            </p>
+
+            <p class="disclaimer">
+                Aviso: O SKIA é um projeto científico e educacional.
+                Não substitui o diagnóstico médico profissional.
+                Consulte sempre um dermatologista.
+            </p>
+
+        </div>
+
+    </footer>
+</body>
+</html>

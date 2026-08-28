@@ -1,0 +1,9 @@
+# Credenciais do banco de dados
+Geral/PHP/conexao.php
+
+# Arquivos enviados pelos usuários
+Uploads/*
+
+# Arquivos de ambiente/credenciais
+.env
+skia.sql
