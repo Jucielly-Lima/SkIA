@@ -2,6 +2,32 @@
 
 O SKIA é um projeto desenvolvido como Trabalho de Conclusão de Curso do Técnico em Informática do CEMEP.
 
+O projeto tem como foco a prevenção do melanoma e a exposição de trabalhadores à radiação solar. A plataforma reúne informações sobre a doença, prevenção e tratamento, além de recursos para pacientes e médicos. :contentReference[oaicite:0]{index=0}
+
+## Funcionalidades
+
+- Cadastro e login de pacientes e médicos
+- Envio de imagens
+- Pesquisa de pacientes
+- Registro e histórico de laudos
+- Informações sobre melanoma e prevenção
+- Índice UV
+- Chatbot
+
+## Tecnologias
+
+HTML, CSS, JavaScript, PHP e MySQL.
+
+Também foram utilizados Visual Studio Code, XAMPP e MySQL Workbench. :contentReference[oaicite:1]{index=1}
+
+## Inteligência Artificial
+
+O projeto também prevê o uso de Inteligência Artificial como apoio na análise de imagens de lesões de pele.
+
+A ferramenta não substitui a avaliação ou o diagnóstico médico. :contentReference[oaicite:2]{index=2}# SKIA
+
+O SKIA é um projeto desenvolvido como Trabalho de Conclusão de Curso do Técnico em Informática do CEMEP.
+
 A proposta surgiu a partir do estudo sobre a exposição de trabalhadores à radiação solar e o risco de desenvolvimento de melanoma. A partir disso, foi desenvolvido um site com informações sobre prevenção, melanoma e atendimento, além de áreas diferentes para pacientes e médicos. :contentReference[oaicite:0]{index=0}
 
 ## Principais funções
